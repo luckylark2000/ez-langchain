@@ -1210,16 +1210,20 @@
 <h2 id="_1">变量</h2>
 <p>变量声明不用用类似 let, const 之类的关键字，python 自动识别</p>
 <p>从python 3.9版本开始类型声明，泛型之类的，编辑器中如果想要有类型错误提示需要安装 pyright vscode 插件</p>
-<pre><code class="language-py"># 变量声明
-num = 3 
+<div class="highlight"><pre><span></span><code><span class="c1"># 变量声明</span>
+<span class="n">num</span> <span class="o">=</span> <span class="mi">3</span> 
 
-## 带类型的（3.9版本开始支持）,类型提示需要安装pyright插件
-a:bool = True
+<span class="c1">## 带类型的（3.9版本开始支持）,类型提示需要安装pyright插件</span>
+<span class="n">a</span><span class="p">:</span><span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span>
 
-print(num) # 3
-print(a) # True
-</code></pre>
+<span class="nb">print</span><span class="p">(</span><span class="n">num</span><span class="p">)</span> <span class="c1"># 3</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span> <span class="c1"># True</span>
+</code></pre></div>
 <h2 id="_2">数据类型</h2>
+<p>类型判断</p>
+<div class="highlight"><pre><span></span><code><span class="n">c</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">c</span><span class="p">)</span><span class="o">==</span><span class="nb">bool</span><span class="p">)</span> <span class="c1"># True</span>
+</code></pre></div>
 <h3 id="_3">基本数据类型</h3>
 <p>数字</p>
 <p>字符</p>
@@ -1227,6 +1231,11 @@ print(a) # True
 <h3 id="_4">容器数据类型</h3>
 <h3 id="_5">二进制数据类型</h3>
 <h3 id="_6">特殊数据类型</h3>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">types</span><span class="w"> </span><span class="kn">import</span> <span class="n">NoneType</span>
+
+<span class="n">n</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">n</span><span class="p">)</span><span class="o">==</span><span class="n">NoneType</span><span class="p">)</span> <span class="c1"># True</span>
+</code></pre></div>
 <h3 id="_7">数据类型特性总结</h3>
 <h3 id="_8">数据类型转换</h3>
 <h3 id="_9">自定义数据类型</h3>

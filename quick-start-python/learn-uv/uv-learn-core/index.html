@@ -1126,24 +1126,24 @@
 <p><code>uv run &lt;instruction&gt;</code> 运行指定的命令 类似于 <code>npm run &lt;script/instruction&gt;</code> 或者 <code>node filename.js</code></p>
 <h2 id="_2">设置镜像源</h2>
 <h3 id="_3">临时使用</h3>
-<pre><code class="language-bash">uv add &lt;package&gt; --index mirror-address
-</code></pre>
+<div class="highlight"><pre><span></span><code>uv<span class="w"> </span>add<span class="w"> </span>&lt;package&gt;<span class="w"> </span>--index<span class="w"> </span>mirror-address
+</code></pre></div>
 <p>例如安装<code>request</code>库：</p>
-<pre><code class="language-bash">uv add request --index https://pypi.tuna.tsinghua.edu.cn/simple
-</code></pre>
+<div class="highlight"><pre><span></span><code>uv<span class="w"> </span>add<span class="w"> </span>request<span class="w"> </span>--index<span class="w"> </span>https://pypi.tuna.tsinghua.edu.cn/simple
+</code></pre></div>
 <h3 id="_4">在项目中设置镜像源</h3>
 <p>在 pyproject.toml中添加如下内容</p>
-<pre><code class="language-patch">+[[tool.uv.index]]
+<div class="highlight"><pre><span></span><code>+[[tool.uv.index]]
 +url = &quot;https://pypi.tuna.tsinghua.edu.cn/simple&quot;
 +default = true
-</code></pre>
+</code></pre></div>
 <h3 id="windows">windows中统一设置镜像源(推荐)</h3>
 <p>参考：pypi 清华镜像官网：<a href="https://mirrors.tuna.tsinghua.edu.cn/help/pypi/">https://mirrors.tuna.tsinghua.edu.cn/help/pypi/</a></p>
 <p>在 ~/.config/uv/uv.toml 或者 /etc/uv/uv.toml 填写下面的内容：</p>
-<pre><code class="language-toml">[[index]]
-url = &quot;https://pypi.tuna.tsinghua.edu.cn/simple&quot;
-default = true
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="k">[[index]]</span>
+<span class="n">url</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;https://pypi.tuna.tsinghua.edu.cn/simple&quot;</span>
+<span class="n">default</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span>
+</code></pre></div>
 
 
 
