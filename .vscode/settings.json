@@ -1,5 +1,16 @@
 {
+  "files.exclude": {
+    "**/.git": true,
+    "**/.svn": true,
+    "**/.hg": true,
+    "**/.DS_Store": true,
+    "**/Thumbs.db": true
+  },
   "[markdown]": {
     "editor.defaultFormatter": "DavidAnson.vscode-markdownlint"
+  },
+  "explorer.fileNesting.enabled": true,
+  "explorer.fileNesting.patterns": {
+    "pyproject.toml": "uv.lock,.python-version,LICENSE,.markdownlint.json,requirements.txt,.gitignore"
   }
 }

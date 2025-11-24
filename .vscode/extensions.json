@@ -1,0 +1,8 @@
+{
+  "recommendations": [
+    "DavidAnson.vscode-markdownlint",
+    "ms-pyright.pyright",
+    "ms-python.python",// 安装时默认会添加pylance这个插件，pylance和pyright有冲突，注意卸载 pylance
+    "njpwerner.autodocstring"
+  ]
+}
