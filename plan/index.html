@@ -1,0 +1,1394 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../TODO/">
+      
+      
+        <link rel="next" href="../ai-dev-eco-lib/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
+    
+    
+      
+        <title>DeepSeek 给的计划（参考） - ez-langchain</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.618322db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#deepseek" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="ez-langchain" class="md-header__button md-logo" aria-label="ez-langchain" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            ez-langchain
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              DeepSeek 给的计划（参考）
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="ez-langchain" class="md-nav__button md-logo" aria-label="ez-langchain" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    ez-langchain
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    欢迎
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../TODO/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    LangChain 学习路线 TODO
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    DeepSeek 给的计划（参考）
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    DeepSeek 给的计划（参考）
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#langchain" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        改善后的前端开发者 LangChain 学习路线
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="改善后的前端开发者 LangChain 学习路线">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        核心理念：利用你的前端优势，以“构建应用”为目标驱动学习。
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#python-1-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        第一阶段：Python 快速入门（1-2周）
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#python-web-1-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        第二阶段：Python 项目工程化与 Web 框架（1-2周）
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ai-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        第三阶段：AI 应用开发生态库（1周）
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#langchain-2-3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        第四阶段：LangChain 核心概念学习（2-3周）
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        第五阶段：综合项目实践（1-2周）
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        总结与改善要点
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ai dev eco lib
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Ai dev eco lib
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ai-dev-eco-lib/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第三阶段：AI 应用开发生态库 (预计: 1周)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Langchain core concept
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Langchain core concept
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../langchain-core-concept/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第四阶段：LangChain 核心概念 (预计: 2-3周)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Project engineering
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Project engineering
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../project-engineering/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第二阶段：Python 项目工程化与 FastAPI (预计: 1-2周)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Project practice
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Project practice
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../project-practice/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第五阶段：综合项目实践 (预计: 1-2周)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Quick start python
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Quick start python
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../quick-start-python/REAMDME/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第一阶段：Python 快速入门 (预计: 1-2周)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_8_2" id="__nav_8_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Basic grammar
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Basic grammar
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../quick-start-python/basic-grammar/install-python-env/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    安装 python 环境
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../quick-start-python/basic-grammar/python%E6%96%87%E4%BB%B6%E6%B3%A8%E9%87%8A/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    python 文件注释
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../quick-start-python/basic-grammar/%E5%8F%98%E9%87%8F%E5%92%8C%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    学习 Python 基础: 变量、数据类型、列表、字典、元组
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_8_3" id="__nav_8_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Learn uv
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Learn uv
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../quick-start-python/learn-uv/uv-learn-core/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    uv 核心知识学习
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#langchain" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        改善后的前端开发者 LangChain 学习路线
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="改善后的前端开发者 LangChain 学习路线">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        核心理念：利用你的前端优势，以“构建应用”为目标驱动学习。
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#python-1-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        第一阶段：Python 快速入门（1-2周）
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#python-web-1-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        第二阶段：Python 项目工程化与 Web 框架（1-2周）
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ai-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        第三阶段：AI 应用开发生态库（1周）
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#langchain-2-3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        第四阶段：LangChain 核心概念学习（2-3周）
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        第五阶段：综合项目实践（1-2周）
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        总结与改善要点
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="deepseek">DeepSeek 给的计划（参考）</h1>
+<p>作为前端开发者，下面的是学习路线和计划，具有可操作性和深度。</p>
+<h2 id="langchain">改善后的前端开发者 LangChain 学习路线</h2>
+<h3 id="_1">核心理念：<strong>利用你的前端优势，以“构建应用”为目标驱动学习。</strong></h3>
+<hr />
+<h2 id="python-1-2">第一阶段：Python 快速入门（1-2周）</h2>
+<p><strong>目标</strong>：能读懂和编写简单的 Python 脚本，理解与 JS 的核心差异。</p>
+<p><strong>学习重点（对比学习）</strong>：</p>
+<ol>
+<li>
+<p><strong>语法差异</strong>：</p>
+<ul>
+<li><strong>变量与类型</strong>：动态强类型 vs JS 的动态弱类型。重点理解 <code>None</code>、<code>List</code>、<code>Dict</code>、<code>Tuple</code>。</li>
+<li><strong>缩进与代码块</strong>：用缩进替代 <code>{}</code>。</li>
+<li><strong>循环与迭代</strong>：<code>for ... in ...</code>，<code>enumerate</code>, <code>items()</code>。</li>
+<li><strong>函数定义</strong>：<code>def</code>、<code>*args</code>、<code>**kwargs</code>。</li>
+<li><strong>列表推导式/字典推导式</strong>：Python 的优雅之处。</li>
+<li><strong>解包操作</strong>：类似 JS 的解构。</li>
+</ul>
+</li>
+<li>
+<p><strong>环境与工具</strong>：</p>
+<ul>
+<li><strong>包管理</strong>：<code>pip</code> (类似 <code>npm</code>)。学会使用 <code>requirements.txt</code>。</li>
+<li><strong>虚拟环境</strong>：<code>venv</code> 或 <code>conda</code> (类似 <code>node_modules</code>，但隔离的是整个 Python 环境)。<strong>这是项目工程化的第一步，必须掌握。</strong></li>
+</ul>
+</li>
+<li>
+<p><strong>异步编程</strong>：</p>
+<ul>
+<li><strong><code>async/await</code></strong>：概念与 JS 几乎一致，语法稍有不同。这是现代 Python AI 库的标配，务必理解。</li>
+</ul>
+</li>
+</ol>
+<p><strong>实践建议</strong>：写一个爬取某个网页信息并保存为 JSON 文件的小脚本。</p>
+<hr />
+<h2 id="python-web-1-2">第二阶段：Python 项目工程化与 Web 框架（1-2周）</h2>
+<p><strong>目标</strong>：能搭建一个可维护的 Python 后端项目，并对外提供 API。</p>
+<ol>
+<li>
+<p><strong>项目结构</strong>：</p>
+<p><code>txt
+my_ai_app/
+├── app/
+│   ├── __init__.py
+│   ├── main.py      # FastAPI 应用入口
+│   ├── routers/     # 路由模块
+│   └── models.py    # Pydantic 模型
+├── requirements.txt
+└── README.md</code></p>
+</li>
+<li>
+<p><strong>学习 FastAPI（首选）</strong>：</p>
+<ul>
+<li><strong>为什么是 FastAPI？</strong> 现代、高性能、自带自动交互式 API 文档、基于 Python 类型提示，对前端开发者极其友好。</li>
+<li><strong>核心概念</strong>：<ul>
+<li>路径操作（<code>@app.get("/")</code>）</li>
+<li><strong>Pydantic 模型</strong>：用于定义请求/响应体的数据结构（类似 TypeScript 的 Interface）。</li>
+<li>依赖注入：管理数据库连接、AI 客户端等。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<p><strong>实践建议</strong>：用 FastAPI 创建一个简单的 TODO API，包含增删改查。这能让你熟悉整个开发、调试、测试流程。</p>
+<hr />
+<h2 id="ai-1">第三阶段：AI 应用开发生态库（1周）</h2>
+<p><strong>目标</strong>：熟悉构建 AI 应用所需的“积木”。</p>
+<ol>
+<li><strong>HTTP 客户端</strong>：<code>httpx</code> 或 <code>aiohttp</code>（用于异步请求，比 <code>requests</code> 更现代）。</li>
+<li><strong>环境变量管理</strong>：<code>python-dotenv</code>（类似 <code>dotenv</code>）。</li>
+<li><strong>向量数据库客户端</strong>：<code>chromadb</code>（轻量级，易于上手）。</li>
+<li><strong>异步数据库 ORM</strong>：<code>SQLModel</code> 或 <code>Tortoise-ORM</code>（如果你的应用需要复杂的数据持久化）。</li>
+<li><strong>数据处理（可选但建议）</strong>：<code>pandas</code>（处理表格数据的神器）。</li>
+</ol>
+<p><strong>注意</strong>：这部分不用精通，知道它们能做什么，在需要时能快速查阅文档即可。</p>
+<hr />
+<h2 id="langchain-2-3">第四阶段：LangChain 核心概念学习（2-3周）</h2>
+<p><strong>这是核心阶段，建议按模块逐个击破。</strong></p>
+<ol>
+<li>
+<p><strong>Model I/O（基石）</strong></p>
+<ul>
+<li><strong>LLMs</strong>：如何调用 OpenAI、Ollama（本地模型）。</li>
+<li><strong>Chat Models</strong>：如何处理多轮对话（<code>SystemMessage</code>, <code>HumanMessage</code>）。</li>
+<li><strong>Prompt Templates</strong>：如何抽象和复用提示词。</li>
+<li><strong>Output Parsers</strong>：如何将 LLM 的非结构化输出解析为结构化数据（如 JSON）。<strong>这对前端至关重要！</strong></li>
+</ul>
+</li>
+<li>
+<p><strong>Retrieval（知识库）</strong></p>
+<ul>
+<li><strong>Document Loaders</strong>：如何从 TXT、PDF、网页加载数据。</li>
+<li><strong>Text Splitters</strong>：如何切割长文本。</li>
+<li><strong>Vectorstores</strong>：如何将文本向量化并存入向量数据库（如 Chroma）。</li>
+<li><strong>Retrievers</strong>：如何根据用户问题检索最相关的文档片段。</li>
+</ul>
+</li>
+<li>
+<p><strong>Chains（组合逻辑）</strong></p>
+<ul>
+<li><strong>LCEL</strong>：使用 <code>|</code> 符号链式组合组件，这是 LangChain 最新、最推荐的写法。</li>
+<li><strong>常见的 Chain</strong>：<code>create_stuff_documents_chain</code>, <code>create_retrieval_chain</code>。学会使用它们构建一个简单的问答机器人。</li>
+</ul>
+</li>
+<li>
+<p><strong>Agents（智能代理）</strong></p>
+<ul>
+<li><strong>概念</strong>：让 LLM 使用工具（Tools）来完成任务。</li>
+<li><strong>Tools</strong>：如何定义工具（如：搜索、查数据库、执行计算）。</li>
+<li><strong>AgentExecutor</strong>：运行代理的核心。</li>
+</ul>
+</li>
+<li>
+<p><strong>Memory</strong>：如何让 Chain 或 Agent 记住之前的对话（<code>ConversationBufferMemory</code>）。</p>
+</li>
+</ol>
+<p><strong>学习建议</strong>：</p>
+<ul>
+<li><strong>从官方文档开始</strong>：LangChain 的文档非常好，概念解释清晰。</li>
+<li><strong>边学边做</strong>：每个概念都配一个可运行的 <code>.py</code> 文件。例如，学完 Model I/O，就写一个脚本，让 LLM 返回指定格式的 JSON。</li>
+</ul>
+<hr />
+<h2 id="1-2">第五阶段：综合项目实践（1-2周）</h2>
+<p><strong>目标</strong>：将前后端知识融合，构建一个完整的 AI 应用。</p>
+<p><strong>项目创意</strong>：</p>
+<ol>
+<li><strong>个人知识库问答助手</strong>：<ul>
+<li><strong>后端（Python + LangChain）</strong>：上传 PDF/TXT 文件，存入向量库，提供问答 API。</li>
+<li><strong>前端（你擅长的技术栈）</strong>：一个简单的界面，可以上传文件和提问。</li>
+</ul>
+</li>
+<li><strong>AI 客服助手</strong>：<ul>
+<li><strong>后端</strong>：使用 <code>Agent</code> 和 <code>Tools</code>，让 AI 能够查询产品信息、返回天气等。</li>
+<li><strong>前端</strong>：一个聊天界面。</li>
+</ul>
+</li>
+</ol>
+<p><strong>技术栈整合</strong>：</p>
+<ul>
+<li>前端通过 <code>fetch</code> 或 <code>axios</code> 调用 FastAPI 接口。</li>
+<li>FastAPI 处理请求，调用 LangChain 逻辑，并返回结构化的 JSON 数据。</li>
+<li>前端接收并渲染结果。</li>
+</ul>
+<hr />
+<h2 id="_2">总结与改善要点</h2>
+<p>你的原计划很好，我主要做了以下<strong>完善</strong>：</p>
+<ol>
+<li><strong>强调对比学习</strong>：在 Python 阶段明确指出与 JS 的差异点，加速理解。</li>
+<li><strong>明确工具链</strong>：指定了 <code>FastAPI</code>、<code>httpx</code>、<code>chromadb</code> 等现代、高效的库。</li>
+<li><strong>细化 LangChain 学习路径</strong>：将其分解为 5 个核心模块，并给出了学习顺序和重点（特别是 <strong>Output Parsers</strong> 和 <strong>LCEL</strong>）。</li>
+<li><strong>强化实践导向</strong>：每个阶段都给出了具体的小任务，最终以一个完整的全栈项目收尾。</li>
+<li><strong>突出异步编程</strong>：现代 Python AI 开发离不开 <code>async/await</code>，提前打好基础。</li>
+</ol>
+<p><strong>最后给你的建议</strong>：不要试图一次性掌握所有内容。遵循这个路线，一步一个脚印，遇到问题善用官方文档和搜索引擎。你的前端经验在构建应用界面和与后端联调时将是巨大的优势。祝你学习顺利！</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": [], "search": "../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.e71a0d61.min.js"></script>
+      
+    
+  </body>
+</html>
