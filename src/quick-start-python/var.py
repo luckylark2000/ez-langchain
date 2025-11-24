@@ -4,6 +4,9 @@
 """
 
 # 变量声明
+from types import NoneType
+
+
 num = 3 # 不用用类似 let, const 之类的，python 自动识别
 
 ## 带类型的（3.9版本开始支持）,类型提示需要安装pyright插件
@@ -16,11 +19,13 @@ print(a)
 i=3
 b = 1.2
 c = True
+n = None
 
 print(type(i)) # <class 'int'>
 print(type(b)) # <class 'float'>
 print(type(c)) # <class 'bool'>
 print(type(c)==bool) # True
+print(type(n)==NoneType) # True
 #
 
 
