@@ -1,6 +1,6 @@
 """_summary_
 学习 Python 基础: 变量、数据类型、列表、字典、元组
-对应文档:docs\quick-start-python\basic-grammar\变量和数据类型.md
+对应文档:docs\\quick-start-python\\basic-grammar\\变量和数据类型.md
 """
 
 # 变量声明
