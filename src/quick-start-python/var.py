@@ -17,9 +17,10 @@ i=3
 b = 1.2
 c = True
 
-print(type(i)) #<class 'int'>
-print(type(b)) #<class 'float'>
-print(type(c)) #<class 'bool'>
+print(type(i)) # <class 'int'>
+print(type(b)) # <class 'float'>
+print(type(c)) # <class 'bool'>
+print(type(c)==bool) # True
 #
 
 
