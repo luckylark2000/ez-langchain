@@ -7,7 +7,8 @@
     "**/Thumbs.db": true
   },
   "[markdown]": {
-    "editor.defaultFormatter": "DavidAnson.vscode-markdownlint"
+    "editor.defaultFormatter": "DavidAnson.vscode-markdownlint",
+    "editor.formatOnSave": true
   },
   "explorer.fileNesting.enabled": true,
   "explorer.fileNesting.patterns": {
