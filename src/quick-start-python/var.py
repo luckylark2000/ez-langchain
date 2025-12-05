@@ -16,15 +16,27 @@ print(num)
 print(a)
 
 # 数据类型
+
+## 基本数据类型
+
+### 数字
 i=3
 b = 1.2
-c = True
-n = None
+c = True # bool 是 int 的子类
+z = 3 + 4j # 复数
 
 print(type(i)) # <class 'int'>
 print(type(b)) # <class 'float'>
 print(type(c)) # <class 'bool'>
+print(type(z)) # <class 'complex'>
 print(type(c)==bool) # True
+print(isinstance(c,bool)) # True
+print('bool 是否是 int 的子类：',issubclass(bool,int)) # True
+print('int 是否是 complex 的子类：',issubclass(int,complex)) # False
+
+### 空
+n = None
+
 print(type(n)==NoneType) # True
 #
 
