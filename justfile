@@ -8,3 +8,7 @@ doc:
 # 执行 main.py
 main:
     uv run main.py
+
+# 启动 fastapi 的 http 服务
+api:
+    uv run fastapi dev .\app\main.py --port 3324
